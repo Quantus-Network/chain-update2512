@@ -8800,7 +8800,7 @@ dependencies = [
 
 [[package]]
 name = "quantus-node"
-version = "0.4.8-fix-one"
+version = "0.4.9-uaosx-one"
 dependencies = [
  "clap",
  "frame-benchmarking-cli",
@@ -8860,7 +8860,7 @@ dependencies = [
 
 [[package]]
 name = "quantus-runtime"
-version = "0.4.8-fix-one"
+version = "0.4.9-uaosx-one"
 dependencies = [
  "env_logger",
  "frame-benchmarking",
