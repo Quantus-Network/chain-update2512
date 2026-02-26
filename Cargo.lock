@@ -8800,7 +8800,7 @@ dependencies = [
 
 [[package]]
 name = "quantus-node"
-version = "0.4.6"
+version = "0.4.7-supg-check"
 dependencies = [
  "clap",
  "frame-benchmarking-cli",
@@ -8860,7 +8860,7 @@ dependencies = [
 
 [[package]]
 name = "quantus-runtime"
-version = "0.4.5-ice-bath"
+version = "0.4.7-supg-check"
 dependencies = [
  "env_logger",
  "frame-benchmarking",
