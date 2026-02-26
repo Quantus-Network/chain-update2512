@@ -17,12 +17,12 @@ runs:
         if [ "$OK" -ne 1 ]; then echo "::error::brew install protobuf llvm failed after 3 attempts"; exit 1; fi
         curl https://sh.rustup.rs -sSf | sh -s -- -y
         brew uninstall cmake
-        brew install openssl cmake
+        brew install openssl cmake 2>&1 | sed '/already installed and up-to-date/d'; exit "${PIPESTATUS[0]:-$?}"
         rustup update
         rustup target add wasm32-unknown-unknown
         rustup component add rustfmt --toolchain nightly
         rustup component add clippy rust-src
-      shell: sh
+      shell: bash
     - name: Set LIBCLANG_PATH for clang-sys (bindgen/rocksdb etc.)
       run: |
         # Homebrew LLVM provides libclang.dylib; clang-sys looks for libclang.dylib.
